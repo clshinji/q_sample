@@ -1,0 +1,33 @@
+{
+  "name": "Enjoy Python-TS Dev",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+	"mounts": [
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws/,target=/home/node/.aws/,type=bind,consistency=cached"
+	],
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-python.mypy-type-checker",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-ssh",
+        "cweijan.vscode-database-client2",
+        "streetsidesoftware.code-spell-checker",
+        "amazonwebservices.amazon-q-vscode"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.formatOnSave": true
+        }
+      }
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && npm install -g aws-cdk && git config --global init.defaultBranch main && sudo apt-get install -y curl unzip && curl --proto '=https' --tlsv1.2 -sSf \"https://desktop-release.q.us-east-1.amazonaws.com/latest/q-aarch64-linux.zip\" -o q.zip && unzip q.zip && bash q/install.sh && rm -rf q.zip q && echo 'export PATH=$PATH:~/.local/bin' >> ~/.bashrc"
+}

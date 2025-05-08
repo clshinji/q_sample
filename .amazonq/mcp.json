@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "jr-east-delay": {
+      "command": "node",
+      "args": ["/workspaces/llm-challenge/mcp-jr-east-delay/build/index.js"],
+      "description": "JR東日本の遅延情報を取得するMCPサーバー"
+    }
+  }
+}
