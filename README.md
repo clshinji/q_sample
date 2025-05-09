@@ -4,15 +4,18 @@
 
 ## 概要
 
-このリポジトリにはテスト用の MCP サーバ として、以下のリポジトリをクローンしたデータを含んでいます：
+このリポジトリは Amazon Q Developer CLI を使って、 MCP を利用するサンプルです。
 
-- **mcp-jr-east-delay**: JR東日本の列車遅延情報を取得するためのModel Context Protocol (MCP) サーバー [GitHub: tinjyuu/mcp-jr-east-delay](https://github.com/tinjyuu/mcp-jr-east-delay/tree/main)
-
-2025/5/8 時点のコードのため、最新のコードを利用するには、必ず git clone してください。
 
 ## mcp-jr-east-delay 
 
-JR東日本の列車遅延情報を取得するMCPサーバーを実装しています。Amazon Q Developer CLI などの MCP クライアントから「getDelays」ツールを呼び出すことで、JR東日本の遅延情報を取得できます。
+JR東日本の列車遅延情報を取得するMCPサーバーを構築できます。
+
+- **mcp-jr-east-delay**: JR東日本の列車遅延情報を取得するためのModel Context Protocol (MCP) サーバー [GitHub: tinjyuu/mcp-jr-east-delay](https://github.com/tinjyuu/mcp-jr-east-delay/tree/main)
+
+```bash
+git clone https://github.com/tinjyuu/mcp-jr-east-delay.git
+```
 
 ### 主な機能
 
@@ -22,9 +25,9 @@ JR東日本の列車遅延情報を取得するMCPサーバーを実装してい
 
 ### セットアップと使用方法
 
-詳細な設定と使用方法については、[mcp-jr-east-delayのREADME](./mcp-jr-east-delay/README.md)を参照してください。
+詳細な設定と使用方法については、[mcp-jr-east-delayのREADME](https://github.com/tinjyuu/mcp-jr-east-delay/blob/main/README.md)を参照してください。
 
-ただし、 Description の追記が必要な箇所があるため、元のリポジトリのコードを良く確認して利用してください。（2025/5/8時点のコードは修正したコードを入れています。） 
+ただし、 Description の追記が必要な箇所があるため、元のリポジトリのコードを良く確認して利用してください。（2025/5/8時点のコードは修正したコードを入れています。）
 
 ```JavaScript
 --- index.ts.orig       2025-05-08 16:12:45
@@ -50,6 +53,10 @@ JR東日本の列車遅延情報を取得するMCPサーバーを実装してい
 - Amazon Q Developer CLI (インストール方法は[公式ドキュメント](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/setup-dev-cli.html)を参照)
 - Amazon Q Developer CLI は Mac の環境を想定してインストールされます。コンテナをビルドするときに Builders ID での認証が必要になりますので、ターミナルの表示に従って操作してください。
 
+### WSL での環境構築
+
+（作成中）
+
 ## 利用方法
 
 利用したい MCP サーバ は `.amazonq/mcp.json` または `~/.aws/amazonq/mcp.json` に記載します。
@@ -59,7 +66,3 @@ Amazon Q Developer CLI は以下のコマンドで起動できます。
 ```bash
 q chat
 ```
-
-## ライセンス
-
-このプロジェクトは、リポジトリ内の個別のライセンスファイルに従います。 
