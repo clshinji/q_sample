@@ -55,7 +55,26 @@ git clone https://github.com/tinjyuu/mcp-jr-east-delay.git
 
 ### WSL での環境構築
 
-（作成中）
+Ubuntu のコマンドライン用に Amazon Q をダウンロードします。
+
+```
+wget https://desktop-release.q.us-east-1.amazonaws.com/latest/amazon-q.deb
+```
+
+パッケージをインストールします。
+
+```
+sudo apt-get install -f
+sudo dpkg -i amazon-q.deb
+```
+
+Amazon Q にログインします。
+
+```
+q login
+```
+
+Builder ID または IAM アイデンティティセンターで、アカウント管理者から提供された開始 URL を使用して認証を行います。
 
 ## 利用方法
 

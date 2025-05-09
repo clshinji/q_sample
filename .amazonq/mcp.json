@@ -1,9 +1,9 @@
-{
-  "mcpServers": {
-    "jr-east-delay": {
-      "command": "node",
-      "args": ["/workspaces/q_sample/mcp-jr-east-delay/build/index.js"],
-      "description": "JR東日本の遅延情報を取得するMCPサーバー"
-    }
-  }
-}
+// {
+//   "mcpServers": {
+//     "jr-east-delay": {
+//       "command": "node",
+//       "args": ["/mnt/c/code/q_sample/mcp-jr-east-delay/build/index.js"],
+//       "description": "JR東日本の遅延情報を取得するMCPサーバー"
+//     }
+//   }
+// }
