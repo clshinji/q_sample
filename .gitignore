@@ -43,5 +43,8 @@ logs/
 .env.test.local
 .env.production.local
 
+# 作業用
+amazon-q.deb
+
 # その他のリポジトリ
-mcp-jr-east-dela/
+mcp-jr-east-delay/
